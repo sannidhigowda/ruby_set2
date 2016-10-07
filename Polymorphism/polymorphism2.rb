@@ -1,42 +1,52 @@
-# Create a class called Person.
-# Define three other classes i.e student, teacher and parent which should have all the properties of Person.
-# Define a method which introduces the person with his firstname, lastname, age, city and state.
-
 class Person
-end
-    class Student<Person
-		def info
-			puts"firstname:ram"
-			puts"lastname:sunder"
-			puts"age:22"
-			puts"city:mysore"
-			puts"state:karnataka"
+	def initialize(firstname,lastname,age,city,state)
+		@fname=firstname
+		@lname=lastname
+		@age=age
+		@city=city
+		@state=state
 	end
 end
 
-	class Teacher<Person
-		def info
-			puts"firstname:annie"
-			puts"lastname:den"
-			puts"age:24"
-			puts"city:banglore"
-			puts"state:karnataka"
+class Student < Person
+	def details
+		puts @fname
+		puts @lname
+		puts @age
+		puts @city
+		puts @state
+		
 	end
+
 end
 
-
-	class Parent<Person
-		def info
-			puts"firstname:leno"
-			puts"lastname:david"
-			puts"age:43"
-			puts"city:mysore"
-			puts"state:karnataka"
+class Teacher < Person
+	def details
+		puts @fname
+		puts @lname
+		puts @age
+		puts @city
+		puts @state
+		
 	end
+
 end
-s=Student.new
-s.info
-t=Teacher.new
-t.info
-p=Parent.new
-p.info
+
+class Parent < Person
+	def details
+		puts @fname
+		puts @lname
+		puts @age
+		puts @city
+		puts @state
+		
+	end
+
+end
+
+s=Student.new('ram','sunder','18','Mysore','Karnataka')
+s.details
+s=Teacher.new('rajath','Rao','38','dharwad','Karnataka')
+s.details
+s=Parent.new('aditya','aradya','30','Banglore','Karnataka')
+s.details
